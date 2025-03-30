@@ -1,0 +1,13 @@
+body {
+  text-align: center; /* Центрує весь контент */
+  font-family: Arial, sans-serif;
+}
+text {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  white-space: pre;
+}
+img {
+  width: 150px;
+  height: auto;
+}

@@ -1,0 +1,216 @@
+IQ-TREE multicore version 2.1.4-beta COVID-edition for Linux 64-bit built Jun 24 2021
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    anya-H410M-S2H-V2 (AVX2, FMA3, 31 GB RAM)
+Command: iqtree -s results/aligned.fasta -nt AUTO -redo
+Seed:    545292 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Mar 27 18:10:21 2025
+Kernel:  AVX+FMA - auto-detect threads (12 CPU cores detected)
+
+Reading alignment file results/aligned.fasta ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 5 sequences with 1267 columns, 541 distinct patterns
+292 parsimony-informative, 298 singleton sites, 677 constant sites
+                      Gap/Ambiguity  Composition  p-value
+   1  sp|O12990|JAK1_DANRE    9.00%    passed     99.89%
+   2  sp|P17706|PTN2_HUMAN   67.25%    passed     90.04%
+   3  sp|P23458|JAK1_HUMAN    8.92%    passed     99.75%
+   4  sp|P52332|JAK1_MOUSE    9.00%    passed     99.97%
+   5  sp|Q09178|JAK1_CYPCA    8.76%    passed     99.89%
+WARNING: 1 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                  20.58%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.001 seconds
+Measuring multi-threading efficiency up to 12 CPU cores
+Increase to 10 rounds for branch lengths
+453 trees examined
+Threads: 1 / Time: 12.023 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -7595
+Threads: 2 / Time: 6.456 sec / Speedup: 1.862 / Efficiency: 93% / LogL: -7595
+Threads: 3 / Time: 4.596 sec / Speedup: 2.616 / Efficiency: 87% / LogL: -7595
+Threads: 4 / Time: 3.747 sec / Speedup: 3.209 / Efficiency: 80% / LogL: -7595
+Threads: 5 / Time: 3.254 sec / Speedup: 3.694 / Efficiency: 74% / LogL: -7595
+Threads: 6 / Time: 2.802 sec / Speedup: 4.291 / Efficiency: 72% / LogL: -7595
+Threads: 7 / Time: 3.703 sec / Speedup: 3.247 / Efficiency: 46% / LogL: -7595
+BEST NUMBER OF THREADS: 6
+
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -7579.118
+2. Current log-likelihood: -7577.266
+3. Current log-likelihood: -7575.760
+4. Current log-likelihood: -7574.573
+Optimal log-likelihood: -7573.595
+Proportion of invariable sites: 0.144
+Gamma shape alpha: 1.450
+Parameters optimization took 4 rounds (0.015 sec)
+Time for fast ML tree search: 0.033 seconds
+
+NOTE: ModelFinder requires 4 MB RAM!
+ModelFinder will test up to 702 protein models (sample size: 1267) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            7605.744     7   15225.488    15225.577    15261.499
+  2  LG+I          7592.334     8   15200.667    15200.782    15241.823
+  3  LG+G4         7565.829     8   15147.658    15147.772    15188.813
+  4  LG+I+G4       7567.866     9   15153.731    15153.874    15200.031
+  5  LG+R2         7555.533     9   15129.067    15129.210    15175.367
+  6  LG+R3         7554.945     11  15131.890    15132.100    15188.478
+ 18  LG+F+R2       7521.919     28  15099.839    15101.150    15243.882
+ 31  WAG+R2        7548.752     9   15115.504    15115.647    15161.804
+ 44  WAG+F+R2      7498.880     28  15053.761    15055.073    15197.804
+ 57  JTT+R2        7519.760     9   15057.519    15057.662    15103.819
+ 70  JTT+F+R2      7482.379     28  15020.758    15022.070    15164.802
+ 83  Q.pfam+R2     7572.951     9   15163.901    15164.044    15210.201
+ 96  Q.pfam+F+R2   7524.049     28  15104.097    15105.409    15248.141
+109  Q.bird+R2     7574.319     9   15166.638    15166.781    15212.937
+122  Q.bird+F+R2   7539.479     28  15134.959    15136.271    15279.002
+135  Q.mammal+R2   7570.717     9   15159.433    15159.576    15205.733
+148  Q.mammal+F+R2 7524.819     28  15105.637    15106.949    15249.681
+161  Q.insect+R2   7549.944     9   15117.888    15118.031    15164.188
+174  Q.insect+F+R2 7510.440     28  15076.880    15078.191    15220.923
+187  Q.plant+R2    7570.850     9   15159.700    15159.843    15205.999
+200  Q.plant+F+R2  7524.116     28  15104.231    15105.543    15248.275
+213  Q.yeast+R2    7586.810     9   15191.621    15191.764    15237.920
+226  Q.yeast+F+R2  7523.029     28  15102.058    15103.370    15246.102
+239  JTTDCMut+R2   7520.253     9   15058.506    15058.650    15104.806
+252  JTTDCMut+F+R2 7482.892     28  15021.785    15023.097    15165.828
+265  DCMut+R2      7608.537     9   15235.075    15235.218    15281.374
+278  DCMut+F+R2    7526.333     28  15108.665    15109.977    15252.709
+291  VT+R2         7535.212     9   15088.424    15088.567    15134.724
+304  VT+F+R2       7500.369     28  15056.739    15058.051    15200.782
+317  PMB+R2        7586.305     9   15190.610    15190.753    15236.910
+330  PMB+F+R2      7533.797     28  15123.594    15124.906    15267.638
+343  Blosum62+R2   7581.593     9   15181.186    15181.329    15227.485
+356  Blosum62+F+R2 7537.527     28  15131.053    15132.365    15275.097
+369  Dayhoff+R2    7608.445     9   15234.891    15235.034    15281.191
+382  Dayhoff+F+R2  7526.290     28  15108.581    15109.893    15252.624
+395  mtREV+R2      7996.610     9   16011.221    16011.364    16057.521
+408  mtREV+F+R2    7558.920     28  15173.840    15175.152    15317.884
+421  mtART+R2      8104.154     9   16226.308    16226.451    16272.608
+434  mtART+F+R2    7632.715     28  15321.431    15322.743    15465.474
+447  mtZOA+R2      8003.790     9   16025.581    16025.724    16071.880
+460  mtZOA+F+R2    7577.830     28  15211.660    15212.971    15355.703
+473  mtMet+R2      7990.677     9   15999.354    15999.497    16045.653
+486  mtMet+F+R2    7544.617     28  15145.234    15146.546    15289.278
+499  mtVer+R2      8047.479     9   16112.958    16113.101    16159.258
+512  mtVer+F+R2    7581.583     28  15219.166    15220.478    15363.210
+525  mtInv+R2      8068.850     9   16155.699    16155.842    16201.999
+538  mtInv+F+R2    7529.005     28  15114.010    15115.322    15258.054
+551  mtMAM+R2      8084.979     9   16187.959    16188.102    16234.258
+564  mtMAM+F+R2    7628.729     28  15313.457    15314.769    15457.501
+577  HIVb+R2       7595.902     9   15209.803    15209.946    15256.103
+590  HIVb+F+R2     7545.627     28  15147.255    15148.567    15291.298
+603  HIVw+R2       7743.710     9   15505.421    15505.564    15551.721
+616  HIVw+F+R2     7601.678     28  15259.355    15260.667    15403.398
+629  FLU+R2        7606.345     9   15230.690    15230.833    15276.990
+642  FLU+F+R2      7550.595     28  15157.190    15158.501    15301.233
+655  rtREV+R2      7616.481     9   15250.961    15251.105    15297.261
+668  rtREV+F+R2    7550.836     28  15157.671    15158.983    15301.715
+681  cpREV+R2      7621.623     9   15261.246    15261.389    15307.545
+694  cpREV+F+R2    7544.030     28  15144.059    15145.371    15288.102
+Akaike Information Criterion:           JTT+F+R2
+Corrected Akaike Information Criterion: JTT+F+R2
+Bayesian Information Criterion:         JTT+R2
+Best-fit model: JTT+R2 chosen according to BIC
+
+All model information printed to results/aligned.fasta.model.gz
+CPU time for ModelFinder: 119.573 seconds (0h:1m:59s)
+Wall-clock time for ModelFinder: 37.751 seconds (0h:0m:37s)
+
+NOTE: 0 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -7519.760
+Optimal log-likelihood: -7519.750
+Site proportion and rates:  (0.847,0.464) (0.153,3.977)
+Parameters optimization took 1 rounds (0.003 sec)
+Computing ML distances based on estimated model parameters...
+Computing ML distances took 0.000466 sec (of wall-clock time) 0.010284 sec(of CPU time)
+Computing RapidNJ tree took 0.000662 sec (of wall-clock time) 0.000000 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -7519.749
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 99 parsimony trees... 0.027 second
+Computing log-likelihood of 4 initial trees ... 0.002 seconds
+Current best score: -7519.749
+
+Do NNI search on 5 best initial trees
+Finish initializing candidate tree set (5)
+Current best tree score: -7519.749 / CPU time: 0.045
+Number of iterations: 5
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+Iteration 10 / LogL: -7524.153 / Time: 0h:0m:0s
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+UPDATE BEST LOG-LIKELIHOOD: -7519.749
+Iteration 20 / LogL: -7520.708 / Time: 0h:0m:0s
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+UPDATE BEST LOG-LIKELIHOOD: -7519.749
+Iteration 30 / LogL: -7519.749 / Time: 0h:0m:0s (0h:0m:0s left)
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+UPDATE BEST LOG-LIKELIHOOD: -7519.749
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+Iteration 40 / LogL: -7521.126 / Time: 0h:0m:0s (0h:0m:0s left)
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+Iteration 50 / LogL: -7530.519 / Time: 0h:0m:0s (0h:0m:0s left)
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+UPDATE BEST LOG-LIKELIHOOD: -7519.749
+Iteration 60 / LogL: -7521.594 / Time: 0h:0m:0s (0h:0m:0s left)
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+UPDATE BEST LOG-LIKELIHOOD: -7519.749
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+UPDATE BEST LOG-LIKELIHOOD: -7519.749
+Iteration 70 / LogL: -7521.642 / Time: 0h:0m:0s (0h:0m:0s left)
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+UPDATE BEST LOG-LIKELIHOOD: -7519.749
+UPDATE BEST LOG-LIKELIHOOD: -7519.749
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+Iteration 80 / LogL: -7521.137 / Time: 0h:0m:0s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -7519.749
+UPDATE BEST LOG-LIKELIHOOD: -7519.749
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+UPDATE BEST LOG-LIKELIHOOD: -7519.749
+Iteration 90 / LogL: -7521.654 / Time: 0h:0m:0s (0h:0m:0s left)
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+Iteration 100 / LogL: -7521.130 / Time: 0h:0m:0s (0h:0m:0s left)
+WARNING: NNI search needs unusual large number of steps (5) to converge!
+TREE SEARCH COMPLETED AFTER 101 ITERATIONS / Time: 0h:0m:0s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -7519.749
+Optimal log-likelihood: -7519.746
+Site proportion and rates:  (0.847,0.463) (0.153,3.970)
+Parameters optimization took 1 rounds (0.003 sec)
+BEST SCORE FOUND : -7519.746
+Total tree length: 4.793
+
+Total number of iterations: 101
+CPU time used for tree search: 3.418 sec (0h:0m:3s)
+Wall-clock time used for tree search: 0.583 sec (0h:0m:0s)
+Total CPU time used: 3.501 sec (0h:0m:3s)
+Total wall-clock time used: 0.603 sec (0h:0m:0s)
+
+Analysis results written to: 
+  IQ-TREE report:                results/aligned.fasta.iqtree
+  Maximum-likelihood tree:       results/aligned.fasta.treefile
+  Likelihood distances:          results/aligned.fasta.mldist
+  Screen log file:               results/aligned.fasta.log
+
+Date and Time: Thu Mar 27 18:10:59 2025
